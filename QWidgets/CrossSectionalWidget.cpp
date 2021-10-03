@@ -27,7 +27,6 @@ CrossSectionalWidget::CrossSectionalWidget(int plane, QWidget *parent): QVTKOpen
     renderWindow = nullptr;
     resliceMapper = nullptr;
     lookupTable = nullptr;
-    lutReader = nullptr;
     imageProperty = nullptr;
     imageSlice = nullptr;
     imageStyle = nullptr;
@@ -38,7 +37,6 @@ void CrossSectionalWidget::releaseResources() {
     renderWindow->Delete();
     resliceMapper->GetInput()->Delete();
     lookupTable->Delete();
-    delete lutReader;
     imageProperty->Delete();
     imageSlice->Delete();
     imageStyle->Delete();

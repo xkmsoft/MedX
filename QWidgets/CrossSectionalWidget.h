@@ -42,7 +42,6 @@ private:
     vtkGenericOpenGLRenderWindow *renderWindow;
     vtkImageResliceMapper *resliceMapper;
     vtkLookupTable *lookupTable;
-    LookupTableReader *lutReader;
     vtkImageProperty *imageProperty;
     vtkImageSlice *imageSlice;
     vtkInteractorStyleImage *imageStyle;
