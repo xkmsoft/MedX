@@ -67,7 +67,7 @@ if (VTK_VERSION VERSION_LESS "8.90.0")
 endif()
 
 # CMAKE_AUTOMOC in ON so the MOC headers will be automatically wrapped.
-add_executable(${PROJECT_NAME} MACOSX_BUNDLE ${CXX_FILES} ${UISrcs} ${QT_WRAP} MedXMainWindow.cpp MedXMainWindow.h QWidgets/CentralWidget.cpp QWidgets/CentralWidget.h QWidgets/CrossSectionalWidget.cpp QWidgets/CrossSectionalWidget.h QWidgets/VolumeRenderingWidget.cpp QWidgets/VolumeRenderingWidget.h Utils/LookupTableReader.cpp Utils/LookupTableReader.h Application.cpp MedXApplication.cpp MedXApplication.h Threads/MedicalImageReaderThread.cpp Threads/MedicalImageReaderThread.h Callbacks/ImageInteractionCallback.cpp Callbacks/ImageInteractionCallback.h)
+add_executable(${PROJECT_NAME} MACOSX_BUNDLE ${CXX_FILES} ${UISrcs} ${QT_WRAP} MedXMainWindow.cpp MedXMainWindow.h QWidgets/CentralWidget.cpp QWidgets/CentralWidget.h QWidgets/CrossSectionalWidget.cpp QWidgets/CrossSectionalWidget.h QWidgets/VolumeRenderingWidget.cpp QWidgets/VolumeRenderingWidget.h Utils/LookupTableReader.cpp Utils/LookupTableReader.h Application.cpp MedXApplication.cpp MedXApplication.h Threads/MedicalImageReaderThread.cpp Threads/MedicalImageReaderThread.h Callbacks/ImageInteractionCallback.cpp Callbacks/ImageInteractionCallback.h Readers/ImageReader.h Readers/DICOMReader.cpp Readers/DICOMReader.h)
 if (Qt${VTK_QT_VERSION}Widgets_VERSION VERSION_LESS "5.11.0")
     qt5_use_modules(${PROJECT_NAME} ${qt_components})
 else()
